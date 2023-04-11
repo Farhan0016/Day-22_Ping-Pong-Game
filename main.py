@@ -40,14 +40,9 @@ while True:
     x_coordinate = ball.xcor()
     y_coordinate = ball.ycor()
     if y_coordinate > 280 or y_coordinate < -280:
-        # ball.setheading(ball.heading() + 45)
-        # ball.setheading(ball.heading() * -1)
         ball.wall_bounce()
 
     # Detect ball collision with paddle
-
-    # if ball.distance(left_paddle) <= 20 or ball.distance(right_paddle) <= 20:
-    #   ball.setheading(ball.heading() * -1)
     if (ball.distance(right_paddle) < 50 and ball.xcor() == 340) or (
             ball.distance(left_paddle) < 50 and ball.xcor() == -340):
         ball.paddle_bounce()
